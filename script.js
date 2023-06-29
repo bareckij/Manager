@@ -42,13 +42,13 @@ total.addEventListener('click', function() {
     let incomesString = "Total Incomes:\n"; // добавляем заголовок
     
     for (let i = 0; i < incomes.length; i++) {
-      incomesString += " - Description: " + incomes[i].description + ", Amount: $" + incomes[i].amount.toFixed(2) + "\n";
+      incomesString += "Source: " + incomes[i].description + ", Amount: $" + incomes[i].amount.toFixed(2) + "\n";
     }
     
     let expensesString = "Total Expenses:\n"; // добавляем заголовок
     
     for (let i = 0; i < expenses.length; i++) {
-      expensesString += " - Description: " + expenses[i].description + ", Amount: $" + expenses[i].amount.toFixed(2) + "\n";
+      expensesString += "Source: " + expenses[i].description + ", Amount: $" + expenses[i].amount.toFixed(2) + "\n";
     }
     
     alert(incomesString + expensesString);
@@ -57,13 +57,13 @@ total.addEventListener('click', function() {
 
 
 function addIncome(){
-    let descriptionInput = document.getElementById("income_desc");
+    let descriptionInput = document.getElementById("income_src");
     let amountInput = document.getElementById("income_amount");
 
 
     incomes.push({
-    description: descriptionInput.value,
-    amount: parseFloat(amountInput.value)
+        description: descriptionInput.value,
+        amount: parseFloat(amountInput.value)
     });
 
 
@@ -84,12 +84,12 @@ function addIncome(){
 
 
 function addExpenses(){
-    let descriptionInput = document.getElementById("expense_desc");
+    let descriptionInput = document.getElementById("expense_src");
     let amountInput = document.getElementById("expense_amount");
 
     expenses.push({
-    description: descriptionInput.value,
-    amount: parseFloat(amountInput.value)
+        description: descriptionInput.value,
+        amount: parseFloat(amountInput.value)
     });
 
     descriptionInput.value = "";
@@ -125,14 +125,3 @@ function calculateBudget() {
 }
 
 calculateBudget();
-
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth'
-    });
-    
-    });
-    });
