@@ -42,13 +42,13 @@ total.addEventListener('click', function() {
     let incomesString = "Total Incomes:\n"; // добавляем заголовок
     
     for (let i = 0; i < incomes.length; i++) {
-      incomesString += "Source: " + incomes[i].description + ", Amount: $" + incomes[i].amount.toFixed(2) + "\n";
+      incomesString += "Source: " + incomes[i].source + ", Amount: $" + incomes[i].amount.toFixed(2) + "\n";
     }
     
     let expensesString = "Total Expenses:\n"; // добавляем заголовок
     
     for (let i = 0; i < expenses.length; i++) {
-      expensesString += "Source: " + expenses[i].description + ", Amount: $" + expenses[i].amount.toFixed(2) + "\n";
+      expensesString += "Source: " + expenses[i].source + ", Amount: $" + expenses[i].amount.toFixed(2) + "\n";
     }
     
     alert(incomesString + expensesString);
@@ -57,17 +57,17 @@ total.addEventListener('click', function() {
 
 
 function addIncome(){
-    let descriptionInput = document.getElementById("income_src");
+    let sourceInput = document.getElementById("income_src");
     let amountInput = document.getElementById("income_amount");
 
 
     incomes.push({
-        description: descriptionInput.value,
+        source: sourceInput.value,
         amount: parseFloat(amountInput.value)
     });
 
 
-    descriptionInput.value = "";
+    sourceInput.value = "";
     amountInput.value = "";
 
 
@@ -84,15 +84,15 @@ function addIncome(){
 
 
 function addExpenses(){
-    let descriptionInput = document.getElementById("expense_src");
+    let sourceInput = document.getElementById("expense_src");
     let amountInput = document.getElementById("expense_amount");
 
     expenses.push({
-        description: descriptionInput.value,
+        source: sourceInput.value,
         amount: parseFloat(amountInput.value)
     });
 
-    descriptionInput.value = "";
+    sourceInput.value = "";
     amountInput.value = "";
 
     alert("Income added successfully!");
