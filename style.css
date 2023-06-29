@@ -86,7 +86,7 @@ h1{
 .total{
     position: relative;
     cursor: pointer;
-    right: -220px;
+    right: -210px;
     top: -20px;
 }
 
@@ -133,7 +133,7 @@ h1{
         padding: 5px;
     }
     .total{
-        right: -150px;
+        right: -120px;
     }
 }
 
