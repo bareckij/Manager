@@ -123,13 +123,11 @@ h1{
     input[type="submit"] {
         background-color: #171b46;
     }
-}
-@media (min-width:992)and(max-width:1400px){
-    .themes{
-        width: 5px;
-        flex-direction: column;
+    .total{
+        right: -100px;
     }
 }
+
 
 .color{
     width: 20px;
