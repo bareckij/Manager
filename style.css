@@ -118,9 +118,6 @@ h1{
     input[type="submit"] {
         background-color: #171b46;
     }
-    .total{
-        right: -100px;
-    }
     .income_block{
         height: 200px;
         padding: 0;
