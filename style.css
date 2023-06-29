@@ -132,6 +132,9 @@ h1{
     .input_number, .input_text, .input_submit{
         padding: 5px;
     }
+    .total{
+        right: -150px;
+    }
 }
 
 
